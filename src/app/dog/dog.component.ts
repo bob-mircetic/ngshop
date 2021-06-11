@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DogsService } from '../dogs.service';
+import { Dog } from '../dog';
 
 @Component({
-  selector: 'app-dog',
+  selector: 'dogs',
   templateUrl: './dog.component.html',
   styleUrls: ['./dog.component.css']
 })
 export class DogComponent implements OnInit {
 
-  constructor() { }
+  @Input()dog:Dog;
+
+  constructor(private dogService: DogsService) { }
 
   ngOnInit(): void {
   }

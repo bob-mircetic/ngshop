@@ -17,6 +17,11 @@ export class DogListComponent implements OnInit {
   theDogs: object[];
 
   ngOnInit(): void {
+    this.getUpdates();
+  }
+
+  getUpdates() {
+    return this.dogService.all().subscribe(data => this.dogs = data);
   }
 
 }
