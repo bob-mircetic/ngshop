@@ -1,2 +1,6 @@
-<div>{{ dog.name }}</div>
-<img [src]="dog.thumbnail" />
+<div>
+    <h5>{{ dog.name }}</h5>
+    <img [src]="dog.thumbnail" />
+    <button (click)="addLike()">Like</button>
+    <span>{{ likes }}</span>
+</div>

@@ -10,10 +10,14 @@ import { Dog } from '../dog';
 export class DogComponent implements OnInit {
 
   @Input()dog:Dog;
+  likes: number = 0;
 
   constructor(private dogService: DogsService) { }
 
   ngOnInit(): void {
   }
 
+  addLike(): void {
+    this.likes += 1;
+  }
 }
