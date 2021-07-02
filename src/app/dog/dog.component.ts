@@ -18,6 +18,7 @@ export class DogComponent implements OnInit {
   }
 
   addLike(): void {
+    debugger;
     this.likes += 1;
   }
 }
